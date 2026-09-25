@@ -1,0 +1,281 @@
+%%%%%%%%%%%%%%%%%
+% Akhil Xavier — Resume
+% Built with AltaCV
+%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% -------------------------------------------------------------------
+% Page layout
+% -------------------------------------------------------------------
+
+\geometry{
+  left=1.25cm,
+  right=1.25cm,
+  top=1.5cm,
+  bottom=1.5cm,
+  columnsep=1.2cm
+}
+
+% Parallel columns
+\usepackage{paracol}
+
+% Header/footer support
+\usepackage{fancyhdr}
+
+% -------------------------------------------------------------------
+% Fonts
+% -------------------------------------------------------------------
+
+\ifxetexorluatex
+  \setmainfont{Lato}
+\else
+  \usepackage[default]{lato}
+\fi
+
+% -------------------------------------------------------------------
+% Colors
+% -------------------------------------------------------------------
+
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% -------------------------------------------------------------------
+% CV formatting
+% -------------------------------------------------------------------
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% -------------------------------------------------------------------
+% Document
+% -------------------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------------------------------------
+% Header
+% -------------------------------------------------------------------
+
+\name{Akhil Xavier}
+\tagline{Embedded Software Engineer}
+
+\photoR{2.5cm}{AkhilXavier.jpg}
+
+\personalinfo{
+  \email{akhilxavier@hotmail.com}
+  \phone{+1 720 883 9760}
+  \location{Denver, CO, USA}
+  \linkedin{akhilxavier}
+}
+
+\makecvheader
+
+% -------------------------------------------------------------------
+% Layout
+% -------------------------------------------------------------------
+
+\AtBeginEnvironment{itemize}{\small}
+
+% Equal-width columns
+\columnratio{0.5}
+
+% Start two-column layout
+\begin{paracol}{2}
+
+\cvsection{Work Experience}
+
+\cvevent{Software Engineer, Senior}{Acuity Intelligent Spaces (post acquisition)}{Jan 2025- Ongoing}{Boulder, CO}
+\begin{itemize}
+    \item Developed LT6711GXE (HDMI to DP) bridge driver on Intel ADL platform (6.6 kernel).
+    \item Development and customization on i915 DRM sub-system.
+    \item Multiple development, validation, test activities on new QSYS NVM device.
+\end{itemize}
+
+\divider
+
+\cvevent{Embedded Software Engineer}{QSC LLC (acquired by Acuity Intelligent Spaces)}{May 2023 - Dec 2024 }{Boulder, CO}
+\begin{itemize}
+    \item Enabled hardware accelerated QSV codec stack on Intel ADL platform.
+    \item Optimized and validated hardware accelerated encode decode performance, GPU performance, video post processing (VPP) performance on intel ADL platform.
+    \item Bring up of new encoder-decoder hardware units for a video streaming project.
+\end{itemize}
+
+\divider
+
+\cvevent{Software Engineer}{Mersive Technologies Inc}{Nov 2019 – March 2023 }{Denver, CO}
+\hspace{0.25cm}\textbf{(Nov 2019 - Dec 2022 India)}
+\begin{itemize}
+    \item Developed end-to-end HDMI input stack (TMDS-to-MIPI CSI), including driver, framework uEvent listener, and preview application.
+    \item Implemented MI2S audio on Qualcomm SoC platforms.
+    \item Improved CPU performance and thermal efficiency.
+    \item Brought up multiple Mersive Pod hardware platforms.
+\end{itemize}
+
+\divider
+
+\cvevent{Senior Software Engineer}{Inforce Computing India Pvt Ltd}{July 2015 – Oct 2019}{Bangalore, India}
+\begin{itemize}
+    \item Developed custom drivers for Bayer/YUV cameras, displays, chargers, HDMI-to-MIPI CSI, and DSI-to-HDMI ICs.
+    \item Customized Qualcomm camera pipelines.
+    \item QCOM SoC-based SBC/SOM bring-up and BSP development.
+\end{itemize}
+
+\divider
+
+\cvevent{Software Intern Engineer}{Inforce Computing India Pvt Ltd}{Nov 2014 – July 2015}{Bangalore, India}
+\begin{itemize}
+    \item Qualcomm SOC based SBC,SOM bringup and BSP.
+\end{itemize}
+
+\switchcolumn
+
+\cvsection{SKILLS AND EXPERTISE}
+\begin{itemize}
+    \item Languages: C, C++, Java (Intermediate Level)
+    \item Android OS, Linux distributions (Linaro), Yocto Project
+    \item GStreamer, ffmpeg
+    \item HW Standards: MIPI CSI-2, MIPI-DSI, PCIe, HDMI, I2S, USB, CCI, DDC, I2C, SPI, UART
+    \item Analyzing schematics and datasheets
+    \item Chipsets: APQ8064, APQ8084, APQ8096, APQ8016, SDM660, Intel ADL
+    \item Modules: Camera, Audio, Display, Charger, LowSpeed Peripherals, Image Processing
+    \item BSP development, Linux Device Drivers
+\end{itemize}
+
+\cvsection{Education}
+
+\cvevent{M Tech, Sensor System Technology}{VIT University, Vellore}{2013 -- 2015}{Tamil Nadu}
+
+\divider
+
+\cvevent{B.Tech, Electronics \& Communication Engineering}{Cochin University of Science and Technology, Kerala}{2007 -- 2011}{Cochin}
+
+\cvsection{ACHIEVEMENTS}
+\begin{itemize}
+    \item Received best paper award during International Science and Technology Conference 2014 held at VIT University.
+    \item Best employee of the month, Mersive Technologies.
+    \item Elected as College Senate member.
+    \item The Project submitted for ESNC 2014 conducted by European Union Space Agency was shortlisted to final stage.
+    \item IEEE paper in EESCO “ISBN:978-1-4799-7676-8” on People Monitoring system.
+\end{itemize}
+
+\cvsection{TASKS ACCOMPLISHED}
+
+\cvsubsection{Driver development and bring-up on QSC hardware}
+\begin{itemize}
+    \item Platform’s : QSC NVM
+    \item SOC : Intel ADL N
+    \item OS’s : QSYS OS, Linux kernel 6.6, Linux Kernel 5.15
+    \item LT6711GXE HDMI to DP bridge I2C driver developed on QSC NVM device for dual input channels. The DP output flow to \\
+          a video processing FPGA and then to SOC through PCIe.
+    \item Enabled and validated hardware accelerated encoding, decoding, video post processing. GPU performance validated. \\
+          Various performance metrics collected.
+
+\newpage
+\switchcolumn
+
+    \item Encoding decoding performance on multiple pixel formats P010LE, YUV422, NV12, YUV444.
+    \item Metrics on thermal performance and power consumption done.
+    \item Enabled device mode operation on USB-C.
+    \item Enabled native out HDMI HDCP support on Linux Intel ADL through libdrm.
+    \item Bring up of various low speed peripherals done.
+\end{itemize}
+
+\cvsubsection{Multiple porting and customization of Mersive Pods}
+\begin{itemize}
+    \item Platform’s : MER6641
+    \item SOC : APQ8084, APQ8096
+    \item OS’s : Lollipop, Nougat, Oreo, Pi, Debian Linaro, Yocto build
+    \item The Mersive pod is ported into upstream Android releases which are supported by the SOC Manufacturer. Also \\
+          ported the Android based Mersive Pod into Debian based Linaro distribution.
+    \item Customized pods peripherals based on customer usecase.
+\end{itemize}
+
+\cvsubsection{Driver development and Bring-up of various camera modules across multiple Android and Debian platforms.}
+\begin{itemize}
+    \item Platform’s : IFC6540, IFC6501, IFC6640, IFC6601, IFC6560
+    \item SOC : APQ8084, APQ8096, APQ8016, SDM660, SDA845
+    \item Sensor Module : OV5640 (YUV 5MP), OV7251, (Bayer Monochrome VGA), OV5645 (YUV 5MP), \\
+                          IMX135 (Bayer 13MP), IMX230 (Bayer 21MP), OV8856 (Bayer 8MP), IMX290, OV8856, IMX258.
+    \item OS’s : Lollipop, Marsh-mellow, Nougat, kernel 3.10 (Debian), Kernel 4.14 (Debian), Oreo PI, kernel 4.4
+    \item Driver development and bring up of different imaging sensors are done. Different YUV, Bayer, \\
+          Monochrome camera sensors are brought up.
+    \item \href{www.github.com/akhilxavi/debian4.14-imx230driver}{www.github.com/akhilxavi/debian4.14-imx230driver}
+\end{itemize}
+
+\cvsubsection{Driver development and bring-up of HDMI to CSI convertor IC TC358840 and ADV7782}
+\begin{itemize}
+    \item Platform’s : IFC6540, IFC6501, IFC6640, IFC6601+, Mersive Pod
+    \item SOC \& FPGA : APQ8084, APQ8096, TC358840 (4K HDMI to MIPI CSI-2 convertor), ACC1s80
+    \item Camera Layers : Kernel, server process, media-controller, Android HAL, V4L2
+    \item OS’s : Lollipop, Nougat
+    \item Implemented HDMI-to-MIPI CSI via TC358840/ADV7782 FPGA, with uEvent-based hot-plug, resolution/FPS detection \\
+          and dynamic camera pipeline reconfiguration.
+\end{itemize}
+
+\cvsubsection{Bring up, Feature implementation, BSP creation and bug Fixing across multiple projects and other miscellaneous works.}
+\begin{itemize}
+    \item Platform’s : IFC6540, IFC6501, IFC6640, IFC6601, IFC6309
+    \item SOC \& FPGA : APQ8084, APQ8096, APQ8016, TC358840
+    \item ACC and HW : ACC-1S80, Si5347
+    \item OS’s : Lollipop, Nougat, Marshmallow, KitKat, Debian 3.10 kernel, Debian 4.14, Oreo
+
+\switchcolumn
+
+    \item Bug Fix for High Bit-rate video causing system shutdown.
+    \item Fixed the issue of FD (file descriptor) leak in camera pipeline during resolution switch.
+    \item Implemented device-tree overlay mechanism on 4.14 Debian kernel for using multiple sensors on same CSI port.
+    \item \href{www.github.com/akhilxavi/debian4.14-DTOverlay}{www.github.com/akhilxavi/debian4.14-DTOverlay}
+    \item  Bug fix for memory leak in camera pipeline.
+    \item  Developed CCI/I2C read/write command line utilities to peek-poke camera sensor registers\\
+           Communicate via IOCTL.
+    \item \href{www.github.com/akhilxavi/CCI-I2C-R-W-utilities}{www.github.com/akhilxavi/CCI-I2C-R-W-utilities}
+    \item  Porting of IFC6410 from KitKat to lollipop.
+    \item  Xilinx DS890 ASIC based MIPI CSI2 frames generator bring up.
+    \item USB Cameras.
+\end{itemize}
+
+\cvsubsection{Customization of camera Image Processing pipeline across various Platforms/Projects}
+\begin{itemize}
+    \item Platform’s : IFC6540, IFC6501, IFC6640, IFC6601
+    \item SOC's : APQ8084, APQ8096, APQ8016
+    \item ACC Card : ACC-1S80
+    \item OS’s : Lollipop, Nougat
+    \item Customized and debugged camera HAL across platforms, enabling dual/simultaneous camera, high-FPS, Y8, \\
+          YUV422→YUV420, Bayer raw dump, CSI 4K frame sync, and stitched-frame pipeline; resolved memory and FD leaks.
+\end{itemize}
+
+\cvsubsection{Bring up of Analog and Digital audio across multiple platforms}
+\begin{itemize}
+    \item Platform’s : IFC6540, IFC6501, IFC6640, IFC6601
+    \item SOC : APQ8084, APQ8096, APQ8016, TC358840
+    \item ACC : ACC-1S80, WCD9330(codec), WCD9320(codec), PCM5100a(DAC)
+    \item OS’s : Lollipop, Nougat, Marshmallow
+    \item Brought up analog WCD codec audio for mic/HDMI stereo recording (44.1/48 kHz) and digital MI2S audio via SoC aDSP. \\
+          \href{www.github.com/akhilxavi/android-3.18-MI2S-audio}{www.github.com/akhilxavi/android-3.18-MI2S-audio}
+\end{itemize}
+
+\cvsubsection{Multiple tasks across various platforms and projects}
+\begin{itemize}
+    \item Brought up Pico projection device BML050; enabled non-standard HDMI resolutions.
+    (1920×1200, 800×600, 854×480) using custom EDID and PLL configuration.
+    \item Configured GPIOs for PWM, I/O, and expansion-connector use cases.
+    \item Configured PMIC regulators and LDOs for multiple peripherals.
+    \item Enabled portrait-mode full-screen camera preview on TV displays.
+    \item Brought up and verified Electronic Image Stabilization (EIS) using SSC.
+    \item Reviewed release notes, test guides, and factory-support documentation during production.
+    \item Improved Mersive Pod performance and implemented external USB caching.
+    \item Resolved multiple software/hardware issues on Mersive Pod.
+    \item Validated hardware platforms for next-generation Mersive products.
+\end{itemize}
+
+\end{paracol}
+\end{document}
